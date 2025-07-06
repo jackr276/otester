@@ -23,13 +23,18 @@ typedef enum {
 } token_t;
 
 
+/**
+ * The lexer item will hold a token and a lexeme
+ */
 struct lexitem_t {
 	token_t token;
 	char lexeme[MAX_LEXEME_LENGTH + 1];
 };
 
-token_t get_next_token(FILE* fl);
 
-
+/**
+ * Get and return the next token in the token stream
+ */
+lexitem_t get_next_token(FILE* fl);
 
 #endif /* LEXER_H */
