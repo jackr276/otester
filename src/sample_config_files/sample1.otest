@@ -1,0 +1,46 @@
+/**
+* Author: Jack Robbins
+* Sample configuration file for ollie
+*/
+
+SUITE sample_test:
+/* Global "report.html" location */
+REPORTLOCATION: "./oc/testfiles/report.html" 
+
+BEGIN
+	ACTION test1:
+		BEGIN
+			RUN: 
+			CONTROL:
+			CURRENT:
+			GENERATE_REPORT: Y
+		END
+	ACTION test2:
+		BEGIN
+			RUN:
+			CONTROL:
+			CURRENT:
+			GENERATE_REPORT: Y
+		END
+	ACTION test3:
+		BEGIN
+			RUN:
+			CONTROL:
+			CURRENT:
+			GENERATE_REPORT: Y
+		END
+	ACTION test4:
+		BEGIN
+			RUN:
+			CONTROL:
+			CURRENT:
+			GENERATE_REPORT: Y
+		END
+	ACTION test5:
+		BEGIN
+			RUN:
+			CONTROL:
+			CURRENT:
+			GENERATE_REPORT: Y
+		END
+END
