@@ -27,6 +27,9 @@ lexitem_t get_next_token(FILE* fl){
 	//Wipe it clean
 	memset(&lexitem, 0, sizeof(lexitem_t));
 
+	//Grab a pointer to the lexeme
+	char* str_ptr = lexitem.lexeme;
+
 	//The current char
 	char ch;
 
