@@ -20,9 +20,14 @@ typedef struct lexitem_t lexitem_t;
 typedef enum {
 	STRING_CONSTANT,
 	DASH, // -
-	SEMICOLON // ;
-	
-
+	SEMICOLON,
+	COLON,
+	REPORTLOCATION, //ReportLocation keyword
+	BEGIN,
+	END,
+	RUN,
+	SLASH,
+	STAR,
 } token_t;
 
 
