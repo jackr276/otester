@@ -7,7 +7,7 @@
 #ifndef LEXER_H
 #define LEXER_H
 
-#define MAX_LEXEME_LENGTH 500
+#define MAX_LEXEME_LENGTH 750 
 
 #include <stdio.h>
 
@@ -19,6 +19,9 @@ typedef struct lexitem_t lexitem_t;
  */
 typedef enum {
 	STRING_CONSTANT,
+	DASH, // -
+	SEMICOLON // ;
+	
 
 } token_t;
 
