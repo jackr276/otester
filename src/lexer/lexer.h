@@ -24,6 +24,7 @@ typedef enum {
 	COLON,
 	REPORTLOCATION, //ReportLocation keyword
 	BEGIN,
+	EXECUTE,
 	END,
 	RUN,
 	SLASH,

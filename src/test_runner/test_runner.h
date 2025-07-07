@@ -9,6 +9,8 @@
 
 //Link to lexer
 #include "../lexer/lexer.h"
+//Link to dynamic array
+#include "../dynamic_array/dynamic_array.h"
 
 //Top level structure to hold a test suite
 typedef struct test_suite_t test_suite_t;
@@ -19,7 +21,8 @@ typedef struct test_action_t test_action_t;
  * A test suite can be made up of zero or many actions
  */
 struct test_suite_t {
-
+	//A dynamic array of test actions
+	dynamic_array_t* actions;
 };
 
 

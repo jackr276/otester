@@ -5,15 +5,15 @@
 
 #include "lexer.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
+char keyword_array[] = {};
+token_t token_array[] = {REPORTLOCATION, BEGIN, END, EXECUTE};
 
 /**
  * Is a processed token a lexitem or a keyword?
  */
 static void identifier_or_keyword(lexitem_t* lexitem){
-
 }
 
 
