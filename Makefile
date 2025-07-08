@@ -41,7 +41,7 @@ dynamic_array-CI.o: $(DYNAMIC_ARRAY_PATH)/dynamic_array.c
 	$(CC) $(CFLAGS) $(DYNAMIC_ARRAY_PATH)/dynamic_array.c -o $(OUTPUT_DIRECTORY_CI)/dynamic_array.o
 
 main-CI.o: ./src/main.c
-	$(CC) $(CFLAGS) ./src/main.c -o $(OUTPUT_DIRECTORY)/main.o
+	$(CC) $(CFLAGS) ./src/main.c -o $(OUTPUT_DIRECTORY_CI)/main.o
 
 otester-CI: main-CI.o lexer-CI.o test_runner-CI.o dynamic_array-CI.o
 	$(CC) $(OUTPUT_DIRECTORY_CI)/main.o $(OUTPUT_DIRECTORY_CI)/lexer.o $(OUTPUT_DIRECTORY_CI)/dynamic_array.o $(OUTPUT_DIRECTORY_CI)/test_runner.o -o $(OUTPUT_DIRECTORY_CI)/otester
