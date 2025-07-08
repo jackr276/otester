@@ -10,6 +10,16 @@
 char keyword_array[] = {};
 token_t token_array[] = {REPORTLOCATION, BEGIN, END, EXECUTE};
 
+
+/**
+ * Helper that will move the seek head back by 1 to "put back" a character
+ */
+static void putback_char(FILE* fl){
+	//Decrement the seek head by 1
+	fseek(fl, -1, SEEK_CUR);
+}
+
+
 /**
  * Is a processed token a lexitem or a keyword?
  */
@@ -23,6 +33,8 @@ static void identifier_or_keyword(lexitem_t* lexitem){
 lexitem_t get_next_token(FILE* fl){
 	//Declare a top level lexitem
 	lexitem_t lexitem;
+	//We always begin in the starting state
+	lexstate_t state = IN_START;
 	
 	//Wipe it clean
 	memset(&lexitem, 0, sizeof(lexitem_t));
@@ -36,7 +48,25 @@ lexitem_t get_next_token(FILE* fl){
 	//So long as we are not at the end of file
 	//We'll also break out if we see a token
 	while((ch = fgetc(fl)) != EOF){
-		switch(ch){
+		//Switch based on the current state of the DFA
+		switch(state){
+			case IN_START:
+
+			/**
+			 * If we're in a comment, we ignore everything that we see until
+			 * we see the closing comment braces
+			*/
+			case IN_COMMENT:
+				//We could see the start of our exit sequence here
+				if(ch == '*'){
+					char next = fgetc(fl);
+				}
+
+				break;
+
+			case IN_STRING:
+
+			case IN_IDENT:
 
 		}
 	}

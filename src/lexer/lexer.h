@@ -29,7 +29,19 @@ typedef enum {
 	RUN,
 	SLASH,
 	STAR,
+	DONE, //The special done token
 } token_t;
+
+
+/**
+ * What state is the lexer in?
+ */
+typedef enum {
+	IN_START,
+	IN_COMMENT,
+	IN_IDENT,
+	IN_STRING,
+} lexstate_t ;
 
 
 /**
