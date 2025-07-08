@@ -46,6 +46,6 @@ main-CI.o: ./src/main.c
 otester-CI: main-CI.o lexer-CI.o test_runner-CI.o dynamic_array-CI.o
 	$(CC) $(OUTPUT_DIRECTORY_CI)/main.o $(OUTPUT_DIRECTORY_CI)/lexer.o $(OUTPUT_DIRECTORY_CI)/dynamic_array.o $(OUTPUT_DIRECTORY_CI)/test_runner.o -o $(OUTPUT_DIRECTORY_CI)/otester
 
-test_run-CI: otester
+test_run-CI: otester-CI
 	$(OUTPUT_DIRECTORY_CI)/otester
 
